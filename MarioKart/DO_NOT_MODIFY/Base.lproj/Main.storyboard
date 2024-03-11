@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MarioKart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ydb-mH-MbI" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Qrf-hV-kp3" appends="YES" id="FKF-27-1SN"/>
+                                </connections>
+                            </imageView>
+                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="character_04" translatesAutoresizingMaskIntoConstraints="NO" id="als-WX-Waq" userLabel="Kart0">
+                                <rect key="frame" x="0.0" y="195" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="r47-Dr-U34" appends="YES" id="67B-Xy-QvO"/>
+                                    <outletCollection property="gestureRecognizers" destination="Kj5-VJ-ha8" appends="YES" id="nxQ-Nf-59J"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="character_01" translatesAutoresizingMaskIntoConstraints="NO" id="NJQ-JM-uLs" userLabel="Kart1">
+                                <rect key="frame" x="65" y="392" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="zjJ-6u-dub" appends="YES" id="1Zn-bP-ZG2"/>
+                                    <outletCollection property="gestureRecognizers" destination="iCo-Q7-ZGL" appends="YES" id="lsc-Vj-ooF"/>
+                                </connections>
+                            </imageView>
+                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="character_02" translatesAutoresizingMaskIntoConstraints="NO" id="xqE-wn-w6s" userLabel="Kart2">
+                                <rect key="frame" x="0.0" y="598" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0m8-39-CqE" appends="YES" id="wH8-wS-zK1"/>
+                                    <outletCollection property="gestureRecognizers" destination="RUc-6f-f4r" appends="YES" id="yyZ-u1-gFd"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mushroom" translatesAutoresizingMaskIntoConstraints="NO" id="fFX-Gz-4E8" userLabel="Mushroom">
+                                <rect key="frame" x="232" y="349" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Hrm-dq-Pz3" appends="YES" id="S7f-C9-zTH"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mystery_box" translatesAutoresizingMaskIntoConstraints="NO" id="2jB-NI-QgO">
+                                <rect key="frame" x="232" y="490" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="84o-8m-slO" appends="YES" id="MUV-x4-GoR"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h33-Q6-0mS">
+                                <rect key="frame" x="310" y="47" width="60" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <buttonConfiguration key="configuration" style="plain" image="gear" catalog="system"/>
+                                <connections>
+                                    <action selector="didTapSettingsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LN1-oS-csI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ydb-mH-MbI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GuN-Gn-JUU"/>
+                            <constraint firstItem="ydb-mH-MbI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MRL-p7-6yw"/>
+                            <constraint firstItem="ydb-mH-MbI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WjP-RJ-a5T"/>
+                            <constraint firstAttribute="bottom" secondItem="ydb-mH-MbI" secondAttribute="bottom" id="g2D-uo-vLz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="kartView0" destination="als-WX-Waq" id="jHd-SY-Ecf"/>
+                        <outlet property="kartView1" destination="NJQ-JM-uLs" id="UBA-HK-I6a"/>
+                        <outlet property="kartView2" destination="xqE-wn-w6s" id="0Rs-Sx-mxw"/>
+                        <outlet property="mushroomView" destination="fFX-Gz-4E8" id="Fwx-fW-V6o"/>
+                        <outlet property="mysteryBox" destination="2jB-NI-QgO" id="8VS-ow-lOo"/>
+                        <segue destination="OcX-Aj-YaT" kind="modal" identifier="SettingsViewControllerSegue" modalPresentationStyle="fullScreen" id="UVS-we-QT3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="r47-Dr-U34">
+                    <connections>
+                        <action selector="didPanKart:" destination="BYZ-38-t0r" id="Vd2-Af-72x"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="bp8-nF-W5U"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="Kj5-VJ-ha8">
+                    <connections>
+                        <action selector="didDoubleTapKart:" destination="BYZ-38-t0r" id="SlG-ml-hPL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="zjJ-6u-dub">
+                    <connections>
+                        <action selector="didPanKart:" destination="BYZ-38-t0r" id="Da4-2A-cXy"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="gYu-uo-aYC"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="iCo-Q7-ZGL">
+                    <connections>
+                        <action selector="didDoubleTapKart:" destination="BYZ-38-t0r" id="CG2-CU-kuL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="0m8-39-CqE">
+                    <connections>
+                        <action selector="didPanKart:" destination="BYZ-38-t0r" id="gcC-hp-bFW"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="RUc-6f-f4r">
+                    <connections>
+                        <action selector="didDoubleTapKart:" destination="BYZ-38-t0r" id="umi-9F-PLG"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Qrf-hV-kp3">
+                    <connections>
+                        <action selector="didLongPressBackground:" destination="BYZ-38-t0r" id="RxL-ko-Rwj"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="Hrm-dq-Pz3">
+                    <connections>
+                        <action selector="didTapMushroom:" destination="BYZ-38-t0r" id="KbD-Ox-Zfr"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="84o-8m-slO">
+                    <connections>
+                        <action selector="didTapMysteryBox:" destination="BYZ-38-t0r" id="y7u-SZ-aQu"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="52" y="25.862068965517242"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="WsU-xU-ChU">
+            <objects>
+                <viewController id="luL-fx-T0v" customClass="SettingsViewController" customModule="MarioKart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aLo-Y5-bCq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of karts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="075-yx-NKb">
+                                <rect key="frame" x="36" y="129" width="124" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kart size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBg-yb-j3s">
+                                <rect key="frame" x="36" y="192" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Hbb-CO-KZB">
+                                <rect key="frame" x="212" y="123" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="numKartsValueChanged:" destination="luL-fx-T0v" eventType="valueChanged" id="aVZ-ig-524"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBw-Yd-0WT">
+                                <rect key="frame" x="331" y="128" width="16" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="wCf-fa-cVw">
+                                <rect key="frame" x="212" y="187" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="kartSizeValueChanged:" destination="luL-fx-T0v" eventType="valueChanged" id="wCl-nk-fI2"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLn-hy-BRN">
+                                <rect key="frame" x="331" y="192" width="16" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Speed multiplier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a17-03-Gee">
+                                <rect key="frame" x="36" y="253" width="124" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="6Ih-U7-2Vu">
+                                <rect key="frame" x="212" y="248" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="speedMultiplierValueChanged:" destination="luL-fx-T0v" eventType="valueChanged" id="Rph-20-7dJ"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0z-CO-Lso">
+                                <rect key="frame" x="331" y="253" width="16" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wf5-FT-tBM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="iYo-PF-5mB"/>
+                    <connections>
+                        <outlet property="kartSizeLabel" destination="MLn-hy-BRN" id="ZPX-cH-0vc"/>
+                        <outlet property="kartSizeStepper" destination="wCf-fa-cVw" id="oik-yn-Z7u"/>
+                        <outlet property="numKartsLabel" destination="WBw-Yd-0WT" id="AzK-Jn-nMV"/>
+                        <outlet property="numberOfKartsStepper" destination="Hbb-CO-KZB" id="yom-x0-DtC"/>
+                        <outlet property="speedMultiplierLabel" destination="H0z-CO-Lso" id="5GN-dc-xl7"/>
+                        <outlet property="speedMultiplierStepper" destination="6Ih-U7-2Vu" id="3XE-YP-EfY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eXh-8r-VwY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1732" y="25.862068965517242"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WbU-TX-7sW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OcX-Aj-YaT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="pgI-HE-Y79"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tWS-rg-qKD">
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="luL-fx-T0v" kind="relationship" relationship="rootViewController" id="Ezw-c6-RcL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ltm-ff-554" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.60000000000002" y="25.862068965517242"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="320" height="568"/>
+        <image name="character_01" width="340" height="340"/>
+        <image name="character_02" width="340" height="340"/>
+        <image name="character_04" width="340" height="340"/>
+        <image name="gear" catalog="system" width="128" height="122"/>
+        <image name="mushroom" width="40" height="40"/>
+        <image name="mystery_box" width="35" height="39"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

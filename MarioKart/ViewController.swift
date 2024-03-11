@@ -153,14 +153,22 @@ class ViewController: UIViewController,
   // This function is called before dismissing the settings screen
   func didChangeSettings(settings: [String : Any]) {
     self.settings = settings
+    print(settings) 
     applyNumKartsSetting(settings)
     applyKartSizeSetting(settings)
     applySpeedMultiplierSetting(settings)
   }
   
-  // Exercise 4: Implement applyNumKartsSetting to show the correct number of karts
   func applyNumKartsSetting(_ settings: [String : Any]) {
-    
+      // Optionally cast the value of `settings["numKarts"]` to an Int and assign it to `numKarts`
+       guard let numKarts = settings["numKarts"] as? Int else {
+         // If the cast fails, then throw an assertion and early terminate
+         assertionFailure("Expecting Int, but got nil")
+         return
+       }
+       // unhide the correct number of karts
+       kartView0.isHidden = numKarts < 2
+       kartView2.isHidden = numKarts < 3
   }
   
   // Exercise 5: Implement applyKartSizeSetting to set the correct kart size

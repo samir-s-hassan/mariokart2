@@ -161,18 +161,18 @@ class ViewController: UIViewController,
   
   func applyNumKartsSetting(_ settings: [String : Any]) {
       // Optionally cast the value of `settings["numKarts"]` to an Int and assign it to `numKarts`
-      let numKarts = settings["numKarts"] as! Int? //as ! allows for forced casting
-       // unhide the correct number of karts
-       kartView0.isHidden = numKarts! < 2 //unwrap numKarts!
-       kartView2.isHidden = numKarts! < 3
+      guard let numKarts = settings["numKarts"] as? Int else {
+        // If the cast fails, then throw an assertion and early terminate
+        assertionFailure("Expecting Int, but got nil")
+        return
+      }
+      // unhide the correct number of karts
+      kartView0.isHidden = numKarts < 2
+      kartView2.isHidden = numKarts < 3
   }
   
-  // Exercise 5: Implement applyKartSizeSetting to set the correct kart size
   func applyKartSizeSetting(_ settings: [String : Any]) {
-        guard let kartSizeMultiplier = settings["kartSize"] as? Int else {
-          assertionFailure("Expecting Int, but got nil")
-          return
-        }
+        let kartSizeMultiplier = settings["kartSize"] as! Int // as! does forced casting
         let kartSize = 1.0 + 0.05 * Double(kartSizeMultiplier)
         let transform = CGAffineTransformIdentity.scaledBy(x: kartSize, y: kartSize)
         kartView0.transform = transform

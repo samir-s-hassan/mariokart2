@@ -59,10 +59,14 @@ class ViewController: UIViewController,
   
   // Called when user taps on the mushroom
   @IBAction func didTapMushroom(_ sender: UITapGestureRecognizer) {
-    animateMushroom()
-    
       animateMushroom()
-      let powerup = MushroomGenerator.maybeGenerateMushroomPowerup()! // force-unwrap the value returned
+      guard let powerup = MushroomGenerator.maybeGenerateMushroomPowerup() else {
+          // code inside this curly brace will run if the unwrapped value is nil
+          print("Didn't get powerup")
+          return
+      }
+      // code below here will run and `powerup` now contains a non-nil value
+      // unlike if-let, `powerup` is accessible below the guard statement and outside of its curly brace
       useMushroomPowerupOnMario(powerup: powerup)
 
   }

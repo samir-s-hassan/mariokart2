@@ -61,18 +61,10 @@ class ViewController: UIViewController,
   @IBAction func didTapMushroom(_ sender: UITapGestureRecognizer) {
     animateMushroom()
     
-    // Exercise 1: Assign the result of MushroomGenerator.maybeGenerateMushroomPowerup()
-    // to a variable. Print something if it's not nil
-    // ...
-      let powerup = MushroomGenerator.maybeGenerateMushroomPowerup()
-      if powerup != nil { // we can use == or != to check if something is nil or not
-          print("Got a powerup!")
-      } else {
-          print("Didn't get a powerup")
-      }
+      animateMushroom()
+      let powerup = MushroomGenerator.maybeGenerateMushroomPowerup()! // force-unwrap the value returned
+      useMushroomPowerupOnMario(powerup: powerup)
 
-    // Exercise 2: Use the powerup on Mario using the useMushroomPowerupOnMario function
-    // ...
   }
   
   private func useMushroomPowerupOnMario(powerup: MushroomPowerup) {
